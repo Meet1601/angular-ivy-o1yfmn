@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>Product Form</h2>
+  <form (ngSubmit)="onSubmit()" #demoForm="ngForm">
+    <label for="Name">Name: </label><br />
+    <input type="text" id="Name" ng-model="Demo.Name" /> <br />
+    <label for="Price">Price</label><br />
+    <input type="number" ng-init="amount" /> <br />
+    <input type="submit" value="Save" />
+    <h2>Customer</h2>
+    <form (ngSubmit)="onSubmit()" #demoForm="ngForm">
+      <label for="Name">Name: </label><br />
+      <input type="text" id="Name" ng-model="Demo.Name" /> <br />
+      <label for="gender">Gender</label> <br />
+      <select id="gender" ng-model="student.gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option></select
+      ><br />
+      <label for="Name">EmailId: </label><br />
+      <input
+        type="email"
+        name="input"
+        ng-model="text"
+        ng-pattern="emailFormat"
+        required
+      />
+      <br />
+      <label for="Phone Number">Number: </label><br />
+      <input
+        name="contact"
+        ng-model="contact"
+        id="c_num"
+        type="text"
+        ng-required="true"
+        ng-pattern="ph_numbr"
+        autocomplete="off"
+        placeholder="Contact Number"
+        class="form-control"
+      />
+      <br />
+      <input type="submit" value="Save" />
+    </form>
+  </form>
+</div>
